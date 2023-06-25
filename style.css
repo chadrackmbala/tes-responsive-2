@@ -1,0 +1,107 @@
+* {
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3;
+    grid-gap: 10px
+}
+.header {
+    background-color: yellow;
+    grid-column: span 12;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.menu {
+    background-color: aqua;
+    grid-column: 2/4;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.main {
+    background-color: darkred;
+    grid-column: 4/10;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.aside {
+    background-color: skyblue;
+    grid-column: 10/12;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.footer {
+    background-color: pink;
+    grid-column: span 12;
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+a {
+    font-family: helvetica;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 10px 50px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color: red;
+    color: #fff;
+    transition:  1s;
+    -webkit-transition:  1s;
+    -moz-transition:  1s;
+    -ms-transition:  1s;
+    -o-transition:  1s;
+}
+a:active {
+    background-color: #fff;
+    color: red;
+    font-size: 20px;
+}
+a:hover {
+    transition: 1s;
+    font-size: 20px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+@media screen and (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }    
+    .header {
+        height: 10vh;
+    }
+    .menu {
+        height: 20vh;
+    }
+    .main {
+        height: 30vh;
+    }
+    .aside {
+        height: 20vh;
+    }
+    .footer {
+        height: 40vh;
+    }
+}
